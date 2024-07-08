@@ -17,6 +17,7 @@
     .mobile-image{
         height: 70px;
         width: 50px;
+
         margin: 10px;
         border: 1px solid black;
         border-radius: 10px;
@@ -30,13 +31,19 @@
     <img src="1mobile.jpg" class="m-img" id="main-image">
 
     <div class="mobile-image-container">
-        <img src="1mobile.jpg" class="mobile-image" >
-        <img src="2mobile.jpg" class="mobile-image" >
-        <img src="3mobile.jpg" class="mobile-image" >
-        <img src="4mobile.jpg" class="mobile-image" >
-        <img src="5mobile.jpg" class="mobile-image" >
+        <img src="1mobile.jpg" class="mobile-image" onclick="changeimage(`1mobile.jpg`)">
+        <img src="2mobile.jpg" class="mobile-image" onclick="changeimage(`2mobile.jpg`)">
+        <img src="3mobile.jpg" class="mobile-image" onclick="changeimage(`3mobile.jpg`)">
+        <img src="4mobile.jpg" class="mobile-image" onclick="changeimage(`4mobile.jpg`)">
+        <img src="5mobile.jpg" class="mobile-image" onclick="changeimage(`5mobile.jpg`)">
     </div>
 
+    <script>
+        function changeimage(imageName){
+         mainimage =  document.getElementById("main-image");
+         mainimage.src = imageName;
+    }
 
+    </script>
 </body>
 </html>
